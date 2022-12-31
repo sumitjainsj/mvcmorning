@@ -1,4 +1,7 @@
 <?php
+// require_once "helper/env.php";
+// require_once "helper/request.php";
+
 array_map(function($filename){
     require_once $filename;
 }, glob("helper/*.php"));

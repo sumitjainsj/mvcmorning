@@ -1,1 +1,6 @@
-<h1> THis is listing page of product</h1>
+<div class="container border mb-3 mt-3">
+    <?php
+    print_r($data);
+    ?>
+
+</div>

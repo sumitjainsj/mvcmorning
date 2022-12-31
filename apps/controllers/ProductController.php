@@ -1,11 +1,18 @@
 <?php
-class ProductController extends Controller{
-    public function index(){
+class ProductController extends Controller
+{
+    public function index()
+    {
+        $allproducts=[
+            ['id'=>1,'name'=>'mobile','description'=>'ache he'],
+            ['id'=>2,'name'=>'laptop','description'=>'ache he'],
+            ['id'=>3,'name'=>'mug','description'=>'ache he'],
+            ['id'=>4,'name'=>'mukka','description'=>'ache he'],
+        ];
         // echo "this is index of product controller";
-        $this->load->view('product.index');
+        $this->load->view('product.index',['data'=>$allproducts]);
     }
     public function create(){
-        echo "this is create of product controller";
         $this->load->view('product.create');
 
     }
