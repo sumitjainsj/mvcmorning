@@ -1,7 +1,7 @@
 <?php
 // require_once "helper/env.php";
 // require_once "helper/request.php";
-
+// Gyanu 
 array_map(function($filename){
     require_once $filename;
 }, glob("helper/*.php"));
@@ -14,4 +14,3 @@ if(file_exists($path)){
 
 });
 $obj= new Autoload();
-?>
