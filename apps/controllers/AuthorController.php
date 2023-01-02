@@ -1,14 +1,11 @@
 <?php
-class ProductController extends Controller
+class AuthorController extends Controller
 {
     public function index()
     {
-        $allproducts=[
-            ['id'=>1,'name'=>'mobile','description'=>'ache he'],
-            ['id'=>2,'name'=>'laptop','description'=>'ache he'],
-            ['id'=>3,'name'=>'mug','description'=>'ache he'],
-            ['id'=>4,'name'=>'mukka','description'=>'ache he'],
-        ];
+        $this->model('author');
+        $allproducts= $this->author->showAll();
+          
         // echo "this is index of product controller";
         $this->load->view('product.index',['data'=>$allproducts]);
     }

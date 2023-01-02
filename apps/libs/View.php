@@ -1,7 +1,7 @@
 <?php
 class View
 {
-    public function view($filename,$data=[],$s=true,$hf=true,)
+    public function view($filename,$data=[],$s=false,$hf=true,)
     {
     $filename=  str_replace('.', '/', $filename);
     $path="apps/views/$filename.php";

@@ -3,7 +3,7 @@
     <div class="row align-items-center">
       <div class="col-lg-2 col-md-4 text-center d-none d-lg-block">
           <a class="navbar-brand " href="index.html">
-            <img src="<?=PUBLICS;?>images/logo.png" alt="" class="img-fluid">
+            <img src="<?=PUBLICS;?>images/sumitlogo.png" alt="" class="img-fluid">
           </a>
       </div>
 

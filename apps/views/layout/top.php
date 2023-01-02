@@ -1,17 +1,10 @@
 <!DOCTYPE html>
 
-<!--
- // WEBSITE: https://themefisher.com
- // TWITTER: https://twitter.com/themefisher
- // FACEBOOK: https://www.facebook.com/themefisher
- // GITHUB: https://github.com/themefisher/
--->
-
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Revolve - Personal Magazine blog Template</title>
+    <title>Sumit's Blog</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
@@ -19,7 +12,7 @@
     <meta name="theme-name" content="revolve" />
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="<?=PUBLICS;?>images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="<?=PUBLICS;?>images/ss.png" type="image/x-icon">
     
     <!-- THEME CSS
 	================================================== -->

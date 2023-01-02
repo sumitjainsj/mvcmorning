@@ -1,6 +1,6 @@
 <?php
 function request(){
-    $robj=(object)['controller'=>'UserController','method'=>'index','get'=>$_GET,'post'=>$_POST,'para'=>null];
+    $robj=(object)['controller'=>'AuthorController','method'=>'index','get'=>$_GET,'post'=>$_POST,'para'=>null];
        
     if(isset($_GET['url'])){
         $url=explode("/",trim($_GET['url'],'/'));
