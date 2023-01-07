@@ -1,20 +1,30 @@
 <?php
 class AuthorController extends Controller
 {
+    public function __construct()
+    {
+    parent ::__construct();
+    $this->model('author');
+    }   
     public function index()
     {
-        $this->model('author');
-        $allproducts= $this->author->showAll();
-          
-        // echo "this is index of product controller";
-        $this->load->view('product.index',['data'=>$allproducts]);
+        $allauthors= $this->author->showAll();
+        //   dd($allauthors);
+        $this->load->view('author.index',['data'=>$allauthors]);
     }
-    public function create(){
-        $this->load->view('product.create');
+    public function create()
+    {
+        $this->load->view('author.create');
 
     }
-    public function store(){
-        echo "this is  store of product controller";
+    public function store()
+    {
+        $data=[
+            'username' => 'vimala',
+            'password' => md5('vimalapan'),
+            'fullname' => 'vimala kumar pan'
+        ];
+        $this->author->save($data);
     }
     public function edit($id){
         echo "this is edit of product controller $id";

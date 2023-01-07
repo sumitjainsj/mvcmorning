@@ -10,7 +10,8 @@ class Controller{
             $obj=strtolower($modelname);
         }
         $mname=ucfirst(strtolower($modelname));
-        $path="apps/models/$mname.php";
+      $path="apps/models/$mname.php";
+    
         if(file_exists($path))
         {
             include $path;

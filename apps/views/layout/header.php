@@ -29,8 +29,8 @@
                               <a class="dropdown-item" href="index-4.html">Home 4</a>
                               <a class="dropdown-item" href="index-5.html">Home 5</a>
                               <a class="dropdown-item" href="index-6.html">Home 6</a>
-                          </div>
-                      </li>
+                           </div>
+                      <!--</li>
                       <li class="nav-item dropdown">
                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Blog Posts
@@ -55,9 +55,10 @@
                             <a class="dropdown-item" href="post-gallery.html">Gallery Format</a>
                             <a class="dropdown-item" href="post-image.html">Image Format</a>
                           </div>
-                      </li>
+                      </li> -->
                       
                       <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                      <li class="nav-item"><a href="<?=ROOT;?>author/create" class="nav-link ">Sign up</a></li>
                   </ul>
 
                   <ul class="list-inline mb-0 d-block d-lg-none">
@@ -83,3 +84,4 @@
     </div>
   </div>
 </header>
+<div class="container border mt-2 mb-2">

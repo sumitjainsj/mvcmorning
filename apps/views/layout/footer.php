@@ -1,3 +1,4 @@
+</div>
 <!-- 
 <section class="footer-2 section-padding gray-bg pb-5">
 	<div class="container">

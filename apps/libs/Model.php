@@ -9,19 +9,52 @@ class Model extends mysqli
         $this->table = $table;
         }
     }
-    public function save(){
-        echo "this will work for store data in database";
+    public function save($data)
+    {
+        $cols=array_keys($data);
+        $cols=implode(',',$cols);
+        $values=implode(',',array_map(fn($ele)=>"'" . addslashes($ele) . "'",$data));
+      echo  $sql="insert into $this->table($cols) values($values)";
+      if($this->query($sql)){
+        return $this->insert_id;
+      }
+      return false;
     }
-    public function update(){
-        echo "this will work for update data in database";
+    public function update($data,$id)
+    {
+        $sql="update $this->table set ";
+        foreach($data as $col => $val){
+            $sql.=" $col ='". addcslashes($val)."',";
+        }
+        $sql=substr($sql,0,-1)."where $this->key=$id";
+        return $this->query($sql);
     }
-    public function showall(){
-        // $sql="select * from $this->table ";
+    public function showall($cols="*", $orderby = '', $order = 'desc')
+    {
+        if(!$orderby){
+            $orderby = $this->key;
+        }
+        $cols= (is_array($cols))?implode(',',$cols):$cols;
+        $sql="select $cols from $this->table order by $orderby $order";
+        return $this->query($sql)->fetch_all(MYSQLI_ASSOC);
+
+        // echo "<pre>";
+        //  $sql="select * from $this->table ";
+        // print_r($this->query($sql)->fetch_all(MYSQLI_ASSOC));
+        //  exit();
     }
-    public function show(){
-        echo "this is show for single record";
+    public function show($id,$cols="*")
+    {
+        $cols= (is_array($cols))?implode(',',$cols):$cols;
+        $sql="select $cols from $this->table where $this->key=$id";
+        return $this->query($sql)->fetch_assoc();
+
     }
-    public function delete(){
-        echo "this will delete single record";
+    public function delete($id)
+    {
+        $id= (is_array($id))?implode(',',$id):$id;
+        
+        $sql="delete from $this->table where $this->key in ($id)";
+        return $this->query($sql);
     }
 }
